@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Submit Stack') {
             steps {
-            bat "stack-name=ec2stack  template-body= file://ec2_cf_template1.json region='ap-south-1'"
+            bat 'stack-name=ec2stack'
+            bat 'template-body= file://ec2_cf_template1.json'
+            bat'region=ap-south-1'
               }
              }
             }
