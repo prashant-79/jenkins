@@ -6,6 +6,7 @@ Parameters:
   VpcId: 
     Description: VPC id 
     Type: AWS::EC2::VPC::Id
+    Default: vpc-0eb34de7070396ef3
 
   SubnetId1:
     Description: Subnet Id where instance will create 
@@ -16,6 +17,7 @@ Parameters:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
     Type: AWS::EC2::KeyPair::KeyName
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    Default: mykey
 
   InstanceType:
     Description: WebServer EC2 instance type
