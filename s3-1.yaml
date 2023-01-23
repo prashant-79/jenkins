@@ -1,0 +1,32 @@
+Parameters:
+  Versioning:
+    Default: Suspended
+    Type: String
+    AllowedValues:
+      - Enabled
+      - Suspended
+  Owner:
+    Type: String
+    Description: Bucket Owner
+    Value: prashant
+  Department:
+    Type: String
+    Description: Department Name
+    Default: IT
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: s3-encrypted-file
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Versioning
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: aws:kms
+      Tags:
+        - Key: Owner
+          Value: !Ref Owner
+        - Key: Department
+          Value: !Ref Department
