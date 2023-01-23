@@ -3,6 +3,10 @@ Parameters:
     Default: 'Suspended'
     Type: String
     AllowedValues: [Enabled, Suspended]
+  Owner:
+    Type: String
+    Description: Bucket Owner
+    Default: "prashant"  
   Department:
     Type: String
     Description: Department Name
@@ -11,7 +15,7 @@ Resources:
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 's3-b-1289'
+      BucketName: 's3-b-128999'
       AccessControl: Private
       VersioningConfiguration:
         Status: !Ref Versioning
