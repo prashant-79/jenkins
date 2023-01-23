@@ -2,9 +2,7 @@ Parameters:
   Versioning:
     Default: Suspended
     Type: String
-    AllowedValues:
-      - Enabled
-      - Suspended
+    AllowedValues: [Enabled, Suspended]
   Owner:
     Type: String
     Description: Bucket Owner
@@ -23,5 +21,5 @@ Resources:
         Status: Versioning
       BucketEncryption:
         ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: aws:kms
+        - ServerSideEncryptionByDefault:
+            SSEAlgorithm: aws:kms
