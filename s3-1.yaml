@@ -3,10 +3,6 @@ Parameters:
     Default: 'Suspended'
     Type: String
     AllowedValues: [Enabled, Suspended]
-  Owner:
-    Type: String
-    Description: Bucket Owner
-    Value: 'prashant'
   Department:
     Type: String
     Description: Department Name
