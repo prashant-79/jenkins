@@ -11,7 +11,7 @@ Resources:
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 's3-encrypted-file'
+      BucketName: 's3-b-1289'
       AccessControl: Private
       VersioningConfiguration:
         Status: !Ref Versioning
